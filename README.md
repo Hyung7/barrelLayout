@@ -6,10 +6,10 @@
 
 待完善：改变可视区width时，则需重新排列图片
 
->获取图片方法：
+>获取图片方法：  
 网址：[http://placekitten.com](http://placekitten.com)  
 使用方法：http://placekitten.com/宽/高/（彩色） 或 http://placekitten.com/g/宽/高/ （黑白）  
-例如：[http://placekitten.com](http://placekitten.com/200/300)
+例如：[http://placekitten.com/200/300](http://placekitten.com/200/300)
 ---
 ### 详细代码：
 #### 一、变量声明，获取元素
