@@ -1,27 +1,14 @@
-# jQuery实现木桶布局
----
-### 大概思路：
-设定一个初始高度，获取每张图片的原始宽高，在不改变宽高比的条件下根据设定的初始高度计算每行可以放下多少张图片，当这一行放不下图片时，根据行的宽度和图片的总宽度的更改此行图片的高度，使之能刚好充满当前行，并将图片放到下一行，以此类推。
+$(function () {
 
-待完善：改变可视区width时，则需重新排列图片
-
->获取图片方法：
-网址：[http://placekitten.com](http://placekitten.com)  
-使用方法：http://placekitten.com/宽/高/（彩色） 或 http://placekitten.com/g/宽/高/ （黑白）  
-例如：[http://placekitten.com](http://placekitten.com/200/300)
----
-### 详细代码：
-#### 一、变量声明，获取元素
-```
   var initHeight = 200, // 初始高度
     usedWidth = 0, // 当前行已占用宽度
     winWidth = $(window).width(), // 可视区的宽
     img = []; // 图片
+
   var wrapper = $(".wrapper");
-```
-#### 二、需要用到的方法
-##### 1.获取图片的width、height和url
-```
+
+
+  // 获取图片
   function getImg() {
     var info = {}; // 图片信息（kwidth, height, url）
     info.width = parseInt(Math.random() * 400 + 100); // 生成 100 - 500 之间随机数
@@ -29,9 +16,23 @@
     info.url = "http://placekitten.com/" + info.width + "/" + info.height;
     return info;
   }
-```
-##### 2.判断图片位置、高度，并向页面中添加图片
-```
+
+  // 初始化
+  (function () {
+    for (var i = 0; i < 30; i++) {
+      addPic();
+    }
+  }())
+
+  // 页面滚动事件
+  $(window).scroll(function () {
+    // 如果文档高度 - 滚动条距离 < 1500,则添加图片
+    if ($(document).height() - $(window).scrollTop() < 1500) {
+      addPic();
+    }
+  })
+
+  // 添加图片
   function addPic() {
     var tr = img.length; // 行数
     var td = tr ? img[tr - 1].length : 0; //当前行图片数
@@ -59,21 +60,5 @@
       img[tr][0] = image; // 把当前图片存到img中
     }
   }
-```
-##### 3.初始化，像页面中添加30张图片
-```
-  (function () {
-    for (var i = 0; i < 30; i++) {
-      addPic();
-    }
-  }())
-```
-#### 三、事件
-##### 1.页面滚动事件，如果文档高度 - 滚动条距离 < 1500,则添加图片
-```
-  $(window).scroll(function () {
-    if ($(document).height() - $(window).scrollTop() < 1500) {
-      addPic();
-    }
-  })
-```
+
+})
