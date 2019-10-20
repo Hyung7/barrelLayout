@@ -83,6 +83,7 @@ $(window).scroll(function () {
 })
 ```
 ##### 2.窗口可视区宽度改变事件，当可视区宽度改变时重新排列图片，并回到顶部
+```
 $(window).resize(function () {
   if (winWidth !== $(window).width()) {
     winWidth = $(window).width(); // 重新获取可视区的宽
@@ -94,3 +95,4 @@ $(window).resize(function () {
     }
   }
 })
+```
