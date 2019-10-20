@@ -86,11 +86,11 @@ $(window).scroll(function () {
 $(window).resize(function () {
   if (winWidth !== $(window).width()) {
     winWidth = $(window).width(); // 重新获取可视区的宽
+    $(document).scrollTop(0);
     usedWidth = 0; // 重新设置当前行已占用宽度
     num = 0; // 重新设置当前行图片数量
     for (var i = 0; i < img.length; i++) {
       setPic(i);
     }
-    $(document).scrollTop(0);
   }
 })
