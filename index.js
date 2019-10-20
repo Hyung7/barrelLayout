@@ -29,12 +29,12 @@ $(function () {
     // 当可视区宽度改变时重新排列图片，并回到顶部
     if (winWidth !== $(window).width()) {
       winWidth = $(window).width(); // 重新获取可视区的宽
+      $(document).scrollTop(0);
       usedWidth = 0; // 重新设置当前行已占用宽度
       num = 0; // 重新设置当前行图片数量
       for (var i = 0; i < img.length; i++) {
         setPic(i);
       }
-      $(document).scrollTop(0);
     }
   })
 
