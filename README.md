@@ -1,6 +1,11 @@
 # jQuery实现木桶布局
 
 ---
+### 效果图：   
+<img src="https://github.com/Hyung7/barrelLayout/blob/master/pic/pic1.png" height=300 />
+<img src="https://github.com/Hyung7/barrelLayout/blob/master/pic/pic2.png" height=300 />
+
+---
 >v1.1更新：  
 改变可视区宽度时，重新排列图片。
 
