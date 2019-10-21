@@ -2,8 +2,8 @@
 
 ---
 ### 效果图：   
-<img src="https://github.com/Hyung7/barrelLayout/blob/master/pic/pic1.png" height=300 />
-<img src="https://github.com/Hyung7/barrelLayout/blob/master/pic/pic2.png" height=300 />
+<img src="https://github.com/Hyung7/barrelLayout/blob/master/pic/pic1.png" height=300 />   
+<img src="https://github.com/Hyung7/barrelLayout/blob/master/pic/pic2.png" height=300 />   
 
 ---
 >v1.1更新：  
