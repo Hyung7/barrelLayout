@@ -41,8 +41,8 @@ $(function () {
   // 添加新图片
   function addPic() {
     var len = img.length;
-    var width = parseInt(Math.random() * 400 + 100); // 图片的宽，100 - 500 之间随机数
-    var height = parseInt(Math.random() * 400 + 100); // 图片的高，100 - 500 之间随机数
+    var width = parseInt(Math.random() * 100 + 100); // 图片的宽，100 - 200 之间随机数
+    var height = parseInt(Math.random() * 100 + 100); // 图片的高，100 - 200 之间随机数
     var url = "http://placekitten.com/" + width + "/" + height; // 图片的url
     img[len] = $("<img src='" + url + "'>"); // 创建图片
     img[len].w = width; // 当前图片的宽
