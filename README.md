@@ -1,9 +1,8 @@
 # jQuery实现木桶布局
 
 ---
-### 效果图：   
-<img src="https://github.com/Hyung7/barrelLayout/blob/master/pic/pic1.png" height=400 />
-<img src="https://github.com/Hyung7/barrelLayout/blob/master/pic/pic2.png" height=400 />
+### 效果展示：   
+[https://hyung7.github.io/barrelLayout/](https://hyung7.github.io/barrelLayout/)
 
 ---
 >v1.1更新：  
